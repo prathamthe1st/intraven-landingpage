@@ -113,14 +113,14 @@ const Footer = ({ t }: any) => {
                     height="30px"
                   />
                 </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("es")}>
+                {/* <LanguageSwitch onClick={() => handleChange("in")}>
                   <SvgIcon
-                    src="spain.svg"
+                    src="india.svg"
                     aria-label="homepage"
                     width="30px"
                     height="30px"
                   />
-                </LanguageSwitch>
+                </LanguageSwitch> */}
               </LanguageSwitchContainer>
             </Col>
           </Row>
@@ -135,21 +135,22 @@ const Footer = ({ t }: any) => {
           >
             <NavLink to="/">
               <LogoContainer>
-                <SvgIcon
+                <h6>IntraVen</h6>
+                {/* <SvgIcon
                   src="logo.svg"
                   aria-label="homepage"
                   width="101px"
                   height="64px"
-                />
+                /> */}
               </LogoContainer>
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
+                href="https://github.com/Adrinlol/"
                 src="github.svg"
               />
               <SocialLink
-                href="https://twitter.com/Adrinlolx"
+                href="https://twitter.com/"
                 src="twitter.svg"
               />
               <SocialLink
@@ -157,15 +158,15 @@ const Footer = ({ t }: any) => {
                 src="linkedin.svg"
               />
               <SocialLink
-                href="https://medium.com/@lashakakabadze/"
+                href="https://medium.com/"
                 src="medium.svg"
               />
-              <a href="https://www.buymeacoffee.com/adrinlol">
+              {/* <a href="https://www.buymeacoffee.com/adrinlol">
                 <img
                   src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=adrinlol&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"
                   alt="Buy me a pizza"
                 />
-              </a>
+              </a> */}
             </FooterContainer>
           </Row>
         </Container>

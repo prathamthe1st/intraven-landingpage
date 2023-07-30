@@ -1,15 +1,10 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Extensive and Smooth Analytics",
+  "text": "Exoses you to a variety of visualized data and analytics that will help you make better decisions.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
-      "icon": "notes.svg"
-    },
-    {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "Need of analytics",
+      "content": "Having a good hold on analytics is a must for any business. Analytics helps you understand your customers better and make targeted decisions.",
       "icon": "notes.svg"
     }
   ]
