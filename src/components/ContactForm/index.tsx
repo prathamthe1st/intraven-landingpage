@@ -1,3 +1,4 @@
+import React from "react";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide, Zoom } from "react-awesome-reveal";
@@ -9,24 +10,48 @@ import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
+import axios from "axios";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(
-    validate
-  ) as any;
+  const [email, setEmail] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [contact, setContact] = React.useState("");
+  const [organization, setOrganization] = React.useState("");
+  const [message, setMessage] = React.useState("");
 
-  const ValidationType = ({ type }: ValidationTypeProps) => {
-    const ErrorMessage = errors[type];
-    return (
-      <Zoom direction="left">
-        <Span erros={errors[type]}>{ErrorMessage}</Span>
-      </Zoom>
-    );
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    if (name === "email") {
+      setEmail(value);
+    } else if (name === "name") {
+      setName(value);
+    } else if (name === "contact") {
+      setContact(value);
+    } else if (name === "organization") {
+      setOrganization(value);
+    } else if (name === "message") {
+      setMessage(value);
+    }
   };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    const inquiry={
+      email: email,
+      name: name,
+      contact: contact,
+      role: organization,
+      message: message,
+    };
+    console.log(inquiry);
+    axios.post("http://13.200.102.72:8000/user/inquiry/", inquiry);
+  };
+
+
 
   return (
     <ContactContainer id={id}>
-      {/* <Row justify="space-between" align="middle">
+      <Row justify="space-between" align="middle">
         <Col lg={12} md={11} sm={24} xs={24}>
           <Slide direction="left">
             <Block title={title} content={content} />
@@ -40,29 +65,44 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   type="text"
                   name="name"
                   placeholder="Your Name"
-                  value={values.name || ""}
+                  value={name || ""}
                   onChange={handleChange}
                 />
-                <ValidationType type="name" />
               </Col>
               <Col span={24}>
                 <Input
                   type="text"
                   name="email"
                   placeholder="Your Email"
-                  value={values.email || ""}
+                  value={email || ""}
                   onChange={handleChange}
                 />
-                <ValidationType type="email" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="number"
+                  name="contact"
+                  placeholder="Your Contact"
+                  value={contact || ""}
+                  onChange={handleChange}
+                />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="organization"
+                  placeholder="Your Organization Type"
+                  value={organization || ""}
+                  onChange={handleChange}
+                />
               </Col>
               <Col span={24}>
                 <TextArea
                   placeholder="Your Message"
-                  value={values.message || ""}
+                  value={message || ""}
                   name="message"
                   onChange={handleChange}
                 />
-                <ValidationType type="message" />
               </Col>
               <ButtonContainer>
                 <Button name="submit">{t("Submit")}</Button>
@@ -70,7 +110,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
             </FormGroup>
           </Slide>
         </Col>
-      </Row> */}
+      </Row>
     </ContactContainer>
   );
 };
