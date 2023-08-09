@@ -26,7 +26,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
 
   return (
     <ContactContainer id={id}>
-      <Row justify="space-between" align="middle">
+      {/* <Row justify="space-between" align="middle">
         <Col lg={12} md={11} sm={24} xs={24}>
           <Slide direction="left">
             <Block title={title} content={content} />
@@ -70,7 +70,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
             </FormGroup>
           </Slide>
         </Col>
-      </Row>
+      </Row> */}
     </ContactContainer>
   );
 };
