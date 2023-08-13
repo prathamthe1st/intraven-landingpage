@@ -63,12 +63,12 @@ const Footer = ({ t }: any) => {
             <Col lg={10} md={10} sm={12} xs={12}>
               
               <Language>{t("Address")}</Language>
-              <Para>Rancho Santa Margarita</Para>
-              <Para>2131 Elk Street</Para>
-              <Para>California</Para>
+              <Para>Kolshet Road</Para>
+              <Para>Thane</Para>
+              <Para>400607</Para>
               <br />
               <Language>{t("Reach us out at")}</Language>
-              <Para>+1 253 565 2365</Para>
+              <Para>+91 9819362847</Para>
               <Para>vikas@intraven.com</Para>
             </Col>
             {/* <Col lg={6} md={6} sm={12} xs={12}>
@@ -103,20 +103,20 @@ const Footer = ({ t }: any) => {
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Adrinlol/"
-                src="github.svg"
+                href="https://wa.me/919819362847"
+                src="whatsapp.svg"
               />
               <SocialLink
-                href="https://twitter.com/"
-                src="twitter.svg"
+                href="https://www.instagram.com/intraedu/"
+                src="instagram.svg"
               />
               <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
+                href="https://www.linkedin.com/company/intraedu/"
                 src="linkedin.svg"
               />
               <SocialLink
-                href="https://medium.com/"
-                src="medium.svg"
+                href="https://youtube.com/@intraedu3573/"
+                src="youtube.svg"
               />
               {/* <a href="https://www.buymeacoffee.com/adrinlol">
                 <img
