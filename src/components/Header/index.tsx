@@ -48,7 +48,7 @@ const Header = ({ t }: any) => {
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
           style={{ width: "180px" }}
-          onClick={() => window.location.href = "http://13.200.102.72:8080/"}
+          onClick={() => window.location.href = "https://app.intraven.in/auth"}
         >
           <Span>
             <Button>{t("Login")}</Button>
