@@ -44,7 +44,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
       message: message,
     };
     console.log(inquiry);
-    axios.post("http://13.200.102.72:8000/user/inquiry/", inquiry);
+    axios.post("https://django.intraven.in/user/inquiry/", inquiry);
   };
 
 
